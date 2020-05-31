@@ -49,6 +49,7 @@ Arguments:
 
 - `-m <message>` permet de spécifier le message. Si l'argument n'est pas présent, un éditeur s'affiche dans lequel le message peut être inscrit.
 - `-a` permet de commit tous les fichiers trackés ayant été modifié.
+- `--ammend` permet de rajouter les modifications au dernier commit.
 
 ---
 
@@ -69,3 +70,74 @@ Arguments:
 
 ---
 
+## git checkout
+
+**`git checkout <commit id|branch name> [...]`** permet de se déplacé vers le commit ou la branche spécifiée.
+
+Arguments:
+
+- `[files]` permet de préciser les fichiers. (Uniquement pour le 1er usage)
+
+---
+
+## git revert
+
+**`git revert <id>`**  permet d'annuler un commit en particulier. Les modifications effectuées par les commits antérieurs et postérieurs sont conservés.
+
+---
+
+## git reset
+
+**`git reset [...]`** permet de revenir en arrière sur différentes choses. Par défaut, la commande vide la liste des fichiers trackés.
+
+Sous commandes:
+
+- `git reset HEAD <file>...` permet de ne plus tracker un ou plusieurs fichier spécifique.
+- `git reset --hard` permet de revenir au précédent commit. ⚠ irréversible ⚠
+- `git reset <id>` supprime tous les commits postérieurs au commit `id`. Les fichiers modifiés sont mis dans le stage et sont prêt à être commit. ⚠ irréversible ⚠
+- `git reset <id> --hard` Permet de revenir au commit `id` et supprime tous les commits postérieurs. ⚠ irréversible ⚠
+
+---
+
+## git branch
+
+**`git branch [...] <name>`** permet de créer la branche *`name`*.
+
+Arguments:
+
+- `-d` permet de supprimer la branche cible.
+
+---
+
+## git merge
+
+**`git merge [...] <name>`** permet de ramener la branche `name` sur la branche courante.
+
+Arguments:
+
+- '--no-ff' permet d'empecher le *fast-forward* (qui rapatrie automatiquement les modifications de la branche si aucune modification n'a eu lieu sur la branche *master*)
+
+---
+
+## git rebase
+
+**`git rebase [...] <branch name>`** déplace tous les commits de la branche courante vers la branche *`name`*. Autrement, on force un *fast-forward*.
+
+Arguments:
+
+- `id` permet de faire un *rebase* interactif.
+- `--continue` permet de continuer en cas d'erreur.
+
+Sous commandes:
+
+- `git rebase~~` permet de fusionner les *n* derniers commits où *n* est le nombre de *~* présent.
+
+---
+
+## git stash
+
+**`git stash`** permet de mettre de coté nos modifications depuis le dernier commit.
+
+Sous commandes:
+
+- `git stash apply` permet de réappliquer les modifications mises de coté.
