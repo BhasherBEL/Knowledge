@@ -37,13 +37,13 @@ Sous-commandes:
 
 ## git add
 
-**`git add <file>...`** permet de tracker un nouveau fichier.
+**`git add <file>...`** permet de tracker un ou plusieurs nouveaux fichiers. Les regex peuvent être utilisées.
 
 ---
 
 ## git commit
 
-**`git commit [args]`** permet d'enregistrer vos modifications sous la forme d'un *commit*. Celui ci doit être accompagné d'un message. 
+**`git commit [args]`** permet de valider vos modifications sous la forme d'une *snapshot*. Celui ci doit être accompagné d'un message. 
 
 Arguments:
 
