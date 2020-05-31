@@ -6,6 +6,10 @@
 
 **`git init`** permet d'initialiser le projet. Il doit être effectué à la racine du projet.
 
+Arguments:
+
+- `--bare` permet de ne pas utiliser le sous-fichier `.git` et d'avoir les informations directement à la racine du projet.
+
 ---
 
 ## git config
@@ -22,6 +26,7 @@ Sous-commandes:
 - `git config user.email "paul@gmail.com"` permet de définir notre email dans le projet.
 - `git config user.name "paul"` permet de définir notre nom dans le projet. Ces deux fonctions permettent de différencier les différentes personnes ayant modifié un projet.
 - `git config color.ui true` permet de rajouter des couleurs dans l'invite de commande git.
+- `git config branch.autosetuprebase always` permet de toujours utiliser `--rebase` lors d'un `pull` (recommandé).
 
 ---
 
@@ -149,4 +154,42 @@ Sous commandes:
 - `git stash drop` permet de supprimer le dernier *stash*.
 - `git stash pop` combine `apply` et `drop`.
 - `git stash branch <branch name>` transforme le *stash* en branche.
+
+---
+
+## git remote
+
+**`git remote [...]`** permet de  gérer les dépôts distants.
+
+Sous commandes:
+
+- `git remote -v` liste les dépôts distants.
+- `git remote rename <old nom> <new name>` permet de renommer le dépôt distant. 
+- `git remote remove <name>` permet de supprimer la branche distante.
+
+---
+
+## git push
+
+**`git push <distant branch> <local branch>`** permet d'envoyer les modifications.
+
+---
+
+## git pull
+
+**`git pull <distant branch> <local branch>`** permet de mettre à jour la branche locale.
+
+Arguments:
+
+- `--rebase` permet de considérer les commits distants comme faisant parti du commit local.
+
+---
+
+## git clone
+
+**`git clone <distant branch> [local folder]`** permet de cloner un dépôt distant.
+
+Arguments:
+
+- `--depth <prof>` permet de définir la profondeur de récupération. (le nombre d'anciens commits)
 
