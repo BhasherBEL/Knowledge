@@ -10,7 +10,7 @@
 
 ## git config
 
-**`git config [args] <command> "<string>"`** permet de configurer un projet. 
+**`git config [...] <command> "<string>"`** permet de configurer un projet. 
 
 Arguments:
 
@@ -43,9 +43,29 @@ Sous-commandes:
 
 ## git commit
 
-**`git commit [args]`** permet de valider vos modifications sous la forme d'une *snapshot*. Celui ci doit être accompagné d'un message. 
+**`git commit [...]`** permet de valider vos modifications sous la forme d'une *snapshot*. Celui ci doit être accompagné d'un message. 
 
 Arguments:
 
 - `-m <message>` permet de spécifier le message. Si l'argument n'est pas présent, un éditeur s'affiche dans lequel le message peut être inscrit.
 - `-a` permet de commit tous les fichiers trackés ayant été modifié.
+
+---
+
+## git log
+
+**`git log [...]`** permet d'afficher les commits ayant déjà eu lieu.
+
+Arguments:
+
+- `-n <amount>` permet de ne voir que les *`amount`* derniers commits.
+- `--oneline` permet d'afficher un commit par ligne.
+
+---
+
+## git diff
+
+**`git diff`** permet de voir les modifications depuis le dernier commit.
+
+---
+
