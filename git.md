@@ -48,7 +48,7 @@ Sous-commandes:
 
 ## git commit
 
-**`git commit [...]`** permet de valider vos modifications sous la forme d'une *snapshot*. Celui ci doit être accompagné d'un message. 
+**`git commit [...]`** permet de valider vos modifications sous la forme d'une *snapshot*. Celui ci doit être accompagné d'un message.  Si  celui ci contient un *id* d'*issue*, ce dernier sera fermé une fois le commit publié.
 
 Arguments:
 
@@ -164,20 +164,24 @@ Sous commandes:
 Sous commandes:
 
 - `git remote -v` liste les dépôts distants.
+
+- `git remote add <name> <url>` permet d'ajouter un dépôt. (Pour GitHub, url = https://github.com/username/repository.git ou "browser url".git)
+
 - `git remote rename <old nom> <new name>` permet de renommer le dépôt distant. 
+
 - `git remote remove <name>` permet de supprimer la branche distante.
 
 ---
 
 ## git push
 
-**`git push <distant branch> <local branch>`** permet d'envoyer les modifications.
+**`git push <distant repository> <local branch>`** permet d'envoyer les modifications.
 
 ---
 
 ## git pull
 
-**`git pull <distant branch> <local branch>`** permet de mettre à jour la branche locale.
+**`git pull <distant repository> <local branch>`** permet de mettre à jour la branche locale.
 
 Arguments:
 
@@ -187,7 +191,7 @@ Arguments:
 
 ## git clone
 
-**`git clone <distant branch> [local folder]`** permet de cloner un dépôt distant.
+**`git clone <distant repository> [local folder]`** permet de cloner un dépôt distant.
 
 Arguments:
 
