@@ -27,10 +27,25 @@ Sous-commandes:
 
 ## git status
 
-**`git status`** permet de connaitre l'état du projet.
+**`git status`** permet de connaitre l'état du projet. Il fait la distinction entre trois types de fichiers:
+
+- Les fichiers prêts être *commit*
+- Les fichiers qui ont été modifiés
+- Les fichiers non trackés
 
 ---
 
 ## git add
 
 **`git add <file>...`** permet de tracker un nouveau fichier.
+
+---
+
+## git commit
+
+**`git commit [args]`** permet d'enregistrer vos modifications sous la forme d'un *commit*. Celui ci doit être accompagné d'un message. 
+
+Arguments:
+
+- `-m <message>` permet de spécifier le message. Si l'argument n'est pas présent, un éditeur s'affiche dans lequel le message peut être inscrit.
+- `-a` permet de commit tous les fichiers trackés ayant été modifié.
