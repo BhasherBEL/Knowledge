@@ -138,6 +138,15 @@ Sous commandes:
 
 **`git stash`** permet de mettre de coté nos modifications depuis le dernier commit.
 
+Arguments:
+
+- `-u` permet de *stasher* aussi les fichiers non trackés.
+
 Sous commandes:
 
 - `git stash apply` permet de réappliquer les modifications mises de coté.
+- `git stash list` permet de voir la liste des *stashs*.
+- `git stash drop` permet de supprimer le dernier *stash*.
+- `git stash pop` combine `apply` et `drop`.
+- `git stash branch <branch name>` transforme le *stash* en branche.
+
